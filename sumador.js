@@ -1,6 +1,5 @@
 function sumador () {
 	var operation = document.getElementById("op").innerHTML;
-	console.log(operation);
 	var ops = operation.split("+",2);
 	var res ="="+(parseInt(ops[0])+parseInt(ops[1]));
 	
@@ -13,10 +12,12 @@ function sumador () {
 function otraSuma(){
 	var operation = document.getElementById("op");
 	
-	op1 = getRandomArbitrary(-1000,1000);
-	op2 = getRandomArbitrary(-1000,1000);
+	op1 = parseInt(getRandomArbitrary(-1000,1000));
+	op2 = parseInt(getRandomArbitrary(-1000,1000));
 	cadena = op1+"+"+op2;
-	operation.innerHTml = cadena;
+	
+	operation.innerHTML = cadena;
+	document.getElementById("res").innerHTML= "";
 	document.getElementById("Enlace").innerHTML = "Add!"; 
 }
 
